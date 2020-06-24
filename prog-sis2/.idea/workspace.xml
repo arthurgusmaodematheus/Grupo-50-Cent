@@ -3,7 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="7fe14fef-dd88-4d0d-bef5-4ef0d2ef731b" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/br/mack/ps2/api/Trends.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/mack/ps2/api/Trends.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/mack/ps2/dao/EconomiaDAOMySQL.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/mack/ps2/dao/EconomiaDAOMySQL.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/mack/ps2/dao/MySQLConnection.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/mack/ps2/dao/MySQLConnection.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -31,7 +32,6 @@
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
-    <option name="showExcludedFiles" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
