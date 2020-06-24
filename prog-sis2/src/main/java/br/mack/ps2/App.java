@@ -52,3 +52,29 @@ public class App extends Application<Configuration> {
         cors.setInitParameter("allowedMethods","OPTIONS,GET,PUT,POST,DELETE,HEAD");
 
         cors.addMappingForUrlPatterns(EnumSet.allOf(DispatcherType.class),true,"");
+        environment.jersey().register(new TrendsResource());
+
+        environment.jersey().setUrlPattern("/api/*");
+
+
+        Scanner print = new Scanner(System.in);
+        int escolha = 0;
+        int escolha2 = 0;
+
+        System.out.println(" Menu ");
+
+        System.out.println("Deseja modificar 0 banco de dados?");
+        System.out.println("Digite 1 para sim ou 2 para não:");
+        escolha = print.nextInt();
+        if (escolha == 1) {
+            EconomiaDAOMySQL dao1 = new EconomiaDAOMySQL();
+            InterfaceUsuarioEconomia economia = new InterfaceUsuarioEconomia(dao1);
+
+            economia.iniciar();
+        } if (escolha == 2) {
+            System.out.println("Você saiu do programa!");
+            System.out.println("Se quiser retornar ao programa, por favor de start novamente :slight_smile: ");
+            return;
+        }
+    }
+}
