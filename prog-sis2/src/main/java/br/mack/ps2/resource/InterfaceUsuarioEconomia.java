@@ -93,3 +93,88 @@ public class InterfaceUsuarioEconomia {
             System.out.println("Ops: problema ao adicionar dados");
         }
     }
+    private void readEconomia() {
+        List<Economia> economias = economiaDAO.read();
+
+        System.out.println("\n*******************************************");
+        System.out.println("**** Lista dos dados cadastrados ****");
+        System.out.println("********************************************");
+        for (Economia economia : economias) {
+            System.out.println("Id da data: " + economia.getId());
+            System.out.println("Data do dado: " + economia.getDate());
+            System.out.println("Valor do dia: " + economia.getValue() + "\n");
+
+        }
+    }
+
+
+    private void updateEconomia() {
+        Economia economia = new Economia();
+
+        System.out.println("*** Atualizar uma data ***");
+        System.out.println("Insira o ID da data que deseja modificar: ");
+
+        economia.setId(in.nextInt());
+        in.nextLine();
+
+        try {
+            Scanner s = new Scanner(System.in);
+            System.out.println("Altere a data do valor: ");
+            String dataRecebida = s.nextLine();
+            DateFormat df = new SimpleDateFormat("dd/MM/yyyy");
+            Date dt = df.parse(dataRecebida);
+            economia.setDate(dt);
+        } catch (ParseException ex) {
+            ex.printStackTrace();
+        }
+
+        System.out.println("Altere o valor do dia: ");
+        economia.setValue(in.nextInt());
+
+        if (economiaDAO.update(economia)) {
+            System.out.println("Dado atualizado no Banco de Dados");
+        } else {
+            System.out.println("Ops: problema ao adicionar dado");
+        }
+    }
+
+
+    private void deleteEconomia() {
+        List<Economia> economias = economiaDAO.read();
+
+
+        while (true) {
+            System.out.println("\n******************************************");
+            System.out.println("*** Lista dos dias cadastrados: ***");
+            System.out.println("******************************************");
+
+            System.out.println(economias);
+
+            int a = 0;
+            for (Economia economia : economias) {
+                System.out.println(a + ". Id do dia: " + economia.getId());
+                System.out.println("  Data: " + economia.getDate());
+                System.out.println("  Valor: " + economia.getValue());
+
+                a++;
+
+            }
+            System.out.println(a + ". Cancelar a operação");
+
+            System.out.println("Qual dia deseja remover?\n");
+            int resposta = in.nextInt();
+            in.nextLine();
+
+            if (resposta == a) {
+                break;
+            } else if (resposta > economias.size() || resposta < 0) {
+                System.out.println("Está opção não é válida");
+            } else if (economiaDAO.delete(economias.get(resposta))) {
+                System.out.println("Dia: " + economias.get(resposta).getDate() + " removido com sucesso");
+            } else {
+                System.out.println("Ops: Falha ao tentar remover!");
+            }
+            break;
+        }
+    }
+}
