@@ -40,3 +40,45 @@ svg{
 }
 
     </style>
+    <!-- Create a div where the graph will take place -->
+    <div id="chart"></div>
+    <!-- <script src="js/chart.js"></script> -->
+    <script>
+        d3.json("/api/trends", 
+        function (data) {
+            var parseTime = d3.timeParse("%Y-%m-%d");
+
+            // format the data
+           var parseDate = d3.timeParse("%Y-%m-%d");
+          data = data.results.map(function(d){
+              d.date = parseDate(d.date)
+              return d;
+          });
+
+            drawChart()(data);
+
+        });
+
+
+
+        function drawChart() {
+
+    var margin = { top: 20, right: 20, bottom: 100, left: 50 },
+        width = 960 - margin.left - margin.right,
+        height = 500 - margin.top - margin.bottom;
+
+    // set the ranges
+    var x = d3.scaleTime().range([0, width]);
+    var y = d3.scaleLinear().range([height, 0]);
+
+    // define the line
+    var valueline = d3.line()
+        .x(function (d) { return x(d.date); })
+        .y(function (d) { return y(d.value); });
+
+    var svg = d3.select("#chart").append("svg")
+        .attr("width", width + margin.left + margin.right)
+        .attr("height", height + margin.top + margin.bottom)
+        .append("g")
+        .attr("transform",
+            "translate(" + margin.left + "," + margin.top + ")");
