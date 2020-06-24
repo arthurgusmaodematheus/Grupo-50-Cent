@@ -82,3 +82,84 @@ svg{
         .append("g")
         .attr("transform",
             "translate(" + margin.left + "," + margin.top + ")");
+            
+            function chart(data) {
+        // Scale the range of the data
+        x.domain(d3.extent(data, function (d) { return d.date; }));
+        y.domain(d3.extent(data, function (d) { return d.value; }));
+
+        // Add the valueline path.
+        svg.append("path")
+            .data([data])
+            .attr("class", "line")
+            .attr("d", valueline)
+            .attr("stroke-width", 5)
+
+        // Add the X Axis
+        svg.append("g")
+            .attr("class", "axis")
+            .attr("transform", "translate(0," + height + ")")
+            .call(d3.axisBottom(x)
+            .tickFormat(d3.timeFormat("%d-%m-%Y")))
+            .selectAll("text")
+            .style("text-anchor", "end")
+            .attr("dx", "-.8em")
+            .attr("dy", ".15em")
+            .attr("transform", "rotate(-45)");
+
+        // Add the Y Axis
+        svg.append("g")
+            .attr("class", "axis")
+            .call(d3.axisLeft(y));
+        
+        svg
+        .selectAll("dot")
+        .data(data)
+        .enter()
+        .append("circle")
+            .attr("class", "circle")
+            .attr("cx", function(d){return x(d.date)}) 
+            .attr("cy", function(d){return y(d.value)})
+            .attr("r", 10)
+            .on("mouseover", mouseover)
+            .on("mousemove", mousemove)
+            .on("mouseleave", mouseleave)
+        
+
+    }
+    
+    // create a tooltip
+    var Tooltip = d3.select("#chart")
+      .append("span")
+      .style("opacity", 0)
+      .attr("class", "tooltip")
+      .style("background-color", "white")
+      .style("border", "solid")
+      .style("border-color", "black")
+      .style("border-width", "2px")
+      .style("border-radius", "5px")
+      .style("padding", "5px")
+      .style("position", "absolute")
+
+      .style("z-index", "1")
+    
+     // Three function that change the tooltip when user hover / move / leave a cell
+     var mouseover = function(d) {
+         Tooltip
+             .style("opacity", 1)
+      }
+     var mousemove = function(d) {
+         Tooltip
+             .html("Exact value: " + d.value)
+             .style("left", (d3.mouse(this)[0]+70) + "px")
+             .style("top", (d3.mouse(this)[1]) + "px")
+      }
+     var mouseleave = function(d) {
+         Tooltip
+             .style("opacity", 0)
+      }
+
+    return chart;
+
+
+}
