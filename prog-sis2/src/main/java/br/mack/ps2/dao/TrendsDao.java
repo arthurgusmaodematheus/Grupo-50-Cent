@@ -29,6 +29,7 @@ public class TrendsDao {
 
             Result result = new Result();
             result.setDate(in.format(economia.getDate()));
+            result.setId(economia.getId());
             result.setValue(economia.getValue());
             this.dataBase.getResults().add(result);
         }

@@ -1,7 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="7fe14fef-dd88-4d0d-bef5-4ef0d2ef731b" name="Default Changelist" comment="" />
+    <list default="true" id="7fe14fef-dd88-4d0d-bef5-4ef0d2ef731b" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/mack/ps2/dao/TrendsDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/mack/ps2/dao/TrendsDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/site/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/br/mack/ps2/App.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/br/mack/ps2/App.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/br/mack/ps2/api/Economia.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/br/mack/ps2/api/Economia.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/br/mack/ps2/api/Result.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/br/mack/ps2/api/Result.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/br/mack/ps2/api/Trends.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/br/mack/ps2/api/Trends.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/br/mack/ps2/dao/EconomiaDAOMySQL.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/br/mack/ps2/dao/EconomiaDAOMySQL.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/br/mack/ps2/dao/EconomiaDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/br/mack/ps2/dao/EconomiaDao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/br/mack/ps2/dao/MySQLConnection.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/br/mack/ps2/dao/MySQLConnection.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/br/mack/ps2/dao/TrendsDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/br/mack/ps2/dao/TrendsDao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/br/mack/ps2/resource/InterfaceUsuarioEconomia.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/br/mack/ps2/resource/InterfaceUsuarioEconomia.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/br/mack/ps2/resource/TrendsResource.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/br/mack/ps2/resource/TrendsResource.class" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -38,6 +52,27 @@
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
   </component>
+  <component name="RunManager">
+    <configuration name="App" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="br.mack.ps2.App" />
+      <module name="prog-sis2" />
+      <option name="PROGRAM_PARAMETERS" value="server" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="br.mack.ps2.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.App" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -56,10 +91,10 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="233" y="0" key="#Project_Structure/0.0.1280.680/1920.0.1920.1040@0.0.1280.680" timestamp="1593025693335" />
-    <state x="96" y="0" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1593025689507">
+    <state x="96" y="0" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1593038624166">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="96" y="0" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1280.680/1920.0.1920.1040@0.0.1280.680" timestamp="1593025689507" />
+    <state x="96" y="0" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1280.680/1920.0.1920.1040@0.0.1280.680" timestamp="1593038624166" />
     <state x="264" y="266" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog" timestamp="1593025239601">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
@@ -68,29 +103,29 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="421" y="96" key="FileChooserDialogImpl/0.0.1280.680/1920.0.1920.1040@0.0.1280.680" timestamp="1593034042539" />
-    <state width="1237" height="79" key="GridCell.Tab.0.bottom" timestamp="1593025383533">
+    <state width="1237" height="285" key="GridCell.Tab.0.bottom" timestamp="1593040066322">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="79" key="GridCell.Tab.0.bottom/0.0.1280.680/1920.0.1920.1040@0.0.1280.680" timestamp="1593025383533" />
-    <state width="1237" height="79" key="GridCell.Tab.0.center" timestamp="1593025383533">
+    <state width="1237" height="285" key="GridCell.Tab.0.bottom/0.0.1280.680/1920.0.1920.1040@0.0.1280.680" timestamp="1593040066322" />
+    <state width="1237" height="285" key="GridCell.Tab.0.center" timestamp="1593040066322">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="79" key="GridCell.Tab.0.center/0.0.1280.680/1920.0.1920.1040@0.0.1280.680" timestamp="1593025383533" />
-    <state width="1237" height="79" key="GridCell.Tab.0.left" timestamp="1593025383533">
+    <state width="1237" height="285" key="GridCell.Tab.0.center/0.0.1280.680/1920.0.1920.1040@0.0.1280.680" timestamp="1593040066322" />
+    <state width="1237" height="285" key="GridCell.Tab.0.left" timestamp="1593040066322">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="79" key="GridCell.Tab.0.left/0.0.1280.680/1920.0.1920.1040@0.0.1280.680" timestamp="1593025383533" />
-    <state width="1237" height="79" key="GridCell.Tab.0.right" timestamp="1593025383533">
+    <state width="1237" height="285" key="GridCell.Tab.0.left/0.0.1280.680/1920.0.1920.1040@0.0.1280.680" timestamp="1593040066322" />
+    <state width="1237" height="285" key="GridCell.Tab.0.right" timestamp="1593040066322">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="79" key="GridCell.Tab.0.right/0.0.1280.680/1920.0.1920.1040@0.0.1280.680" timestamp="1593025383533" />
+    <state width="1237" height="285" key="GridCell.Tab.0.right/0.0.1280.680/1920.0.1920.1040@0.0.1280.680" timestamp="1593040066322" />
     <state x="452" y="119" key="chooseDestDirectoryDialog" timestamp="1593030460827">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="452" y="119" key="chooseDestDirectoryDialog/0.0.1280.680/1920.0.1920.1040@0.0.1280.680" timestamp="1593030460827" />
-    <state x="337" y="165" key="com.intellij.ide.util.TipDialog" timestamp="1593034028656">
+    <state x="337" y="165" key="com.intellij.ide.util.TipDialog" timestamp="1593040288552">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="337" y="165" key="com.intellij.ide.util.TipDialog/0.0.1280.680/1920.0.1920.1040@0.0.1280.680" timestamp="1593034028656" />
+    <state x="337" y="165" key="com.intellij.ide.util.TipDialog/0.0.1280.680/1920.0.1920.1040@0.0.1280.680" timestamp="1593040288552" />
   </component>
 </project>
