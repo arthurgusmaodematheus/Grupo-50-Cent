@@ -40,7 +40,7 @@ public class App extends Application<Configuration> {
         }
 
         try {
-            (new App()).run(args);
+            (new App()).run(new String[]{"server"});
         } catch (Exception ex){
             ex.printStackTrace();
         }
