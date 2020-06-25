@@ -5,7 +5,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Trends implements Serializable {
-    private String term = "Coronavirus";
+    private String term = "Economia";
     private List<Result> results;
 
     public Trends() {
